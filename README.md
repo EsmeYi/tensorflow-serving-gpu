@@ -104,23 +104,11 @@ There is a more convenient approch to show all signature def and tag set:
 	
 ## 5. Generating client requests
 
-| dataset | [VOC-2017](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar) |
-| :----:  | :----: |
-| Size | 300*300 |
-| Channel    | 3 |
-| Amount | 4952 |
 
 client_requirements.txt
 
 ~~~
-grpcio==1.12.1
-html5lib==0.9999999
-numpy==1.14.3
-Pillow==5.1.0
-protobuf==3.6.1
-requests==2.18.4
-six==1.12.0
-tensorflow-serving-api==1.13.0
+	$ pip install -r client_requirements.txt
 ~~~
 
 client_request.py
@@ -135,11 +123,16 @@ client_request.py
 | VOC root directory | -voc | ./VOCdevkit/VOC2007 |
 | batch size | -b | 32 |
 
+| dataset | [VOC-2017](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar) |
+| :----:  | :----: |
+| Size | 300*300 |
+| Channel    | 3 |
+| Amount | 4952 |
 
 ## Result
 
-| model | batch size |latency (ms) |
-| :----:  | :----: | :----: |
-| Mask-RCNN    | 32 | 830306 ms|
-| Faster-RCNN   | 32 | 346567 ms|
-| SSD   | 5 | 173585 ms|
+| model | batch size |mAP |latency (ms) [load image + inference + save result] | per img (ms) |
+| :----:  | :----: | :----: |:----: |:----: |
+| Mask-RCNN    | 32 | 0.6977 | 1085690 ms| 219.24 ms| 
+| Faster-RCNN   | 32 | 0.7021 | 419204 ms| 84.65 ms|
+| SSD   | 32 | 0.7232 | 1618414 ms | 326.82 |
