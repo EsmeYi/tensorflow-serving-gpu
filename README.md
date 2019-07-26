@@ -131,11 +131,11 @@ client_request.py
 
 ## Result
 
-| model | model | batch size |mAP |latency (ms) [load image + inference + save result] | per img (ms) |
+| model | model | batch size |mAP |latency (ms) [load image + inference + save result] | img/sec |
 | :----:  | :----: | :----: |:----: |:----: | :----: | 
-| TF:Serving | Mask-RCNN    | 32 | 0.6977 | 1085690 ms| 219.24 ms| 
-| | Faster-RCNN   | 32 | 0.7021 | 419204 ms| 84.65 ms|
-| | SSD   | 32 | 0.7232 | 1618414 ms | 326.82 ms|
-| Local | Mask-RCNN    | 32 | 0.6977 | 426658 ms | 86.15 ms| 
-| | Faster-RCNN   | 32 | 0.7021 | 343156 ms| 69.29 ms|
-| | SSD   | 32 | 0.7232 | 428904 ms | 86.61 ms|
+| TF:Serving | Mask-RCNN    | 32 | 0.6977 | 1085690 ms| 6.07 | 
+| | Faster-RCNN   | 32 | 0.7021 | 419204 ms| 15.28 |
+| | SSD   | 32 | 0.7232 | 1618414 ms | 27.94 |
+| Local | Mask-RCNN    | 32 | 0.6977 | 426658 ms | 11.61| 
+| | Faster-RCNN   | 32 | 0.7021 | 343156 ms| 14.43|
+| | SSD   | 32 | 0.7232 | 428904 ms | 36.75 |
