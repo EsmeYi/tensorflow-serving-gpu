@@ -1,5 +1,5 @@
 grpcio==1.12.1
-html5lib==0.9999999
+html5lib==0.99999999
 numpy==1.14.3
 Pillow==5.1.0
 protobuf==3.6.1
