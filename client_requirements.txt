@@ -3,6 +3,6 @@ html5lib==0.9999999
 numpy==1.14.3
 Pillow==5.1.0
 protobuf==3.6.1
-requests==2.20.0
+requests==2.31.0
 six==1.12.0
 tensorflow-serving-api==1.13.0
